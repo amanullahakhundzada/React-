@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import FilmsList from "./components/filmsList";
 // import React from "react";
 
 class App extends React.Component {
@@ -15,10 +16,11 @@ addItem(){
   let newItem=[...this.state.list,this.state.text]
   this.setState({list: newItem,text:""})
 }
+ 
   render() {
     // let listItem=this.state.list.map((e,idx)=>(
     //   <li >{e}</li>
-    // ))
+    // ))))
     return (
       <div className="App">
         <div className="App-header">
@@ -34,10 +36,11 @@ addItem(){
         <ul>
           {this.state.list.map((e ,idx) => (<li key={idx}>{e}</li>))}
         </ul>
+        <FilmsList />    
         </div>
-      </div>
-    );
-  }
+      </div>);
+
+}
 }
 export default App;
                           
